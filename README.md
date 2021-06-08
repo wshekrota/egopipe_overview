@@ -15,6 +15,9 @@ being sent? It is best for test purposes that you only use one type so you know 
 The executable is the result of either copying a your_pipe_code.go file in the egopipe directory
 or writing your own. Then compile or 'go build ./...'. Then you have an egopipe executable.
 
+What is the your_pipe_code.go? It is the transform piece. It's where the doc which is the collection of 
+templated fields becomes exposed as a map.
+
 What does deployment look like? That depends on your elastic setup. Basically you will copy 
 those simple files to the proper logstash directories. 
 
