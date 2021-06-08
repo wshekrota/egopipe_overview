@@ -98,3 +98,6 @@ Then 'docker build .' should start logstash.
 Rinse and repeat .... do the same thing for Kibana!
 Then they should all be running.
 Rewriting the transform stage or the your_pipe_code.go file is then as simple as control-C, copy and rebuild.
+elasticsearch           172.17.0.2  
+logstash                172.17.0.3
+kibana                  172.17.0.4
