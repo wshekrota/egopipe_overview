@@ -46,14 +46,16 @@ logstash.yml  ->  /etc/logstash
 Once in place the application logstash may be started. Please be aware this is still beta.
 
 Either create your own placement scripts or manually copy files.
-Or use the Dockerfiles I created. They assume those 4 files are in the current directory.
+Or use the Dockerfiles I created. They assume those 4 files are in the current directory for logstash.
+If you clone down the egopipe_containers repo you will see the 3 differerent app directories and what they 
+contain.
 
 If you just want to try out egopipe I advise you do the following. Operations will be quite simple 
-and you can do a recompile and deploy it by simply control-C out of logstash.
+and you can do a recompile and deploy it by simply control-C out of logstash and then ..
 - copy the new executable
 - docker build . 
 
-Each elastic application has a Dockerfile directory. You can cd to it and start it with a 'docker build'.
+Each elastic application has a Dockerfile directory. You can cd to it and start it with a 'docker build .'.
 
 #### clones
 
@@ -70,7 +72,7 @@ start that app 'docker build .'
 
 try it 'curl -i http://172.17.0.2:9200' (should return version)
 
-In this test caintainer instance if you control-C and docker build again the database will be reset so remember that.
+In this elastic test container instance if you control-C and docker build again the database will be reset so remember that.
 
 
 so now lets do logstash
